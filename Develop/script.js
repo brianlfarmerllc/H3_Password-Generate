@@ -29,10 +29,13 @@ generateBtn.addEventListener("click", writePassword);
 
 //Prompts that come up after pressing generate password
 function generatePassword() {
+  
+  
   passLength = prompt("Enter the number of characters for your new password. Password must be more than 12 characters but less than 128 characters in length.")
 
   if (passLength < 12 || passLength > 128) {
     alert("Password must be more than 12 characters but less than 128 characters in length.") 
+    return;
   }
 
   numbers = confirm("Do you want numbers in your password?");
